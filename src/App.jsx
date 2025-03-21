@@ -66,7 +66,7 @@ function App() {
     'Go to start';                                        // move가 0이면 요고 출력
     return (
       <li key={move}>
-        <button onClick={()=> jumpTo(move)}>
+        <button className="move-button" onClick={()=> jumpTo(move)}>
           {desc}
         </button>
       </li>

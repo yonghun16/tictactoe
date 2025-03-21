@@ -12,7 +12,7 @@ const Board = ({squares, onClick}) => {   // 현재 사각형들, 클릭 함수 
   }
 
   return (
-    <div>
+    <div className="board-wrapper">
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
