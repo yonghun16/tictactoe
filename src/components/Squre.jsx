@@ -3,11 +3,10 @@ import './Squre.css'
 
 const Squre = ({onClick, value}) => {
   return (
-    <button className="squre"
-      onClick={onClick}>
+    <button className="squre" onClick={onClick}>
       {value}
     </button>
-  )
+  );
 }
 
 export default Squre
