@@ -56,6 +56,19 @@ function App() {
     setXIsNext(!xIsNext);                                 // 순서 바꾸기
   }
 
+  const moves =  history.map((step, move) => {
+    const desc = move ? 
+    'Go to move #' + move :
+    'Go to start';
+    return (
+      <li key={move}>
+        <button onClick={()=> jumpTo(move)}>
+          {desc}
+        </button>
+      </li>
+    )
+  })
+
   return (
     <>
       <div className="game">
@@ -67,6 +80,7 @@ function App() {
         </div>
         <div className="game-info">
           <div className="status"> {status} </div>
+          <ol>{moves}</ol>
         </div>
       </div>
     </>
