@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import Squre from './Squre'
 import './Board.css'
 
-const Board = ({squares, onClick}) => {
+const Board = ({squares, onClick}) => {   // 현재 사각형들, 클릭 함수 받음
 
   const renderSquare = (i) => {
     return <Squre
-      onClick={() => onClick(i)}
-      value={squares[i]}
+      onClick={() => onClick(i)}        // 몇 번째 사각형을 클릭 했는지?, i의 값도 내려줌
+      value={squares[i]}                // 몇 번째 사각형의 값
     />
   }
 
